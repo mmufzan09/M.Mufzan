@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 export default function ProjectsPage() {
@@ -38,12 +40,12 @@ export default function ProjectsPage() {
             className="relative bg-gray-900 rounded-2xl border border-gray-700 shadow-xl p-8 overflow-hidden group transition-all duration-500 hover:bg-purple-800/80"
           >
             {/* Project Name */}
-            <h2 className="text-2xl font-bold text-center group-hover:opacity-0 transition-opacity duration-300">
+            <h2 className="text-2xl font-bold text-center mb-4 md:group-hover:opacity-0 transition-opacity duration-300">
               {project.name}
             </h2>
 
-            {/* Hover Details */}
-            <div className="absolute inset-0 bg-black/85 p-6 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            {/* Always visible on mobile, hover effect on md+ */}
+            <div className="md:absolute md:inset-0 md:opacity-0 md:group-hover:opacity-100 md:bg-black/85 md:p-6 md:flex md:flex-col md:justify-center md:items-center md:text-center md:transition-opacity md:duration-500">
               <p className="text-md mb-4 text-gray-200">{project.description}</p>
               <Link
                 href={project.link}

@@ -6,6 +6,8 @@ import {
   FaShoppingCart,
   FaMobileAlt,
   FaCogs,
+  FaGlobe,
+  FaTools,
 } from "react-icons/fa";
 
 const services = [
@@ -33,6 +35,18 @@ const services = [
     description:
       "Boosting your website’s speed, SEO, and performance for better UX and search engine visibility.",
   },
+  {
+    icon: <FaGlobe size={40} className="mx-auto text-white" />,
+    title: "Custom Web Apps",
+    description:
+      "Developing tailored web applications to match your exact business goals and user needs.",
+  },
+  {
+    icon: <FaTools size={40} className="mx-auto text-white" />,
+    title: "Maintenance & Support",
+    description:
+      "Providing ongoing website updates, bug fixes, and performance monitoring to keep your site running smoothly.",
+  },
 ];
 
 const ServicesSection = () => {
@@ -44,31 +58,27 @@ const ServicesSection = () => {
         </h2>
 
         {/* Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative bg-gray-900 p-8 rounded-2xl border border-gray-700 shadow-lg group hover:bg-purple-700/90 transition duration-500 overflow-hidden"
+              className="relative bg-gray-900 p-8 rounded-2xl border border-gray-700 shadow-lg group transition duration-500 overflow-hidden"
             >
-              {/* Icon and Title (visible by default) */}
-              <div className="flex flex-col items-center group-hover:opacity-0 transition-opacity duration-300">
+              {/* Icon and Title */}
+              <div className="flex flex-col items-center mb-4">
                 {service.icon}
                 <h3 className="mt-4 text-xl font-semibold text-white">
                   {service.title}
                 </h3>
               </div>
 
-              {/* Description on hover */}
-              <div className="absolute inset-0 bg-black/90 p-6 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                <p className="text-sm text-gray-200 leading-relaxed">
-                  {service.description}
-                </p>
+              {/* 📱 Always visible on mobile, hover effect for desktop */}
+              <div className="text-sm text-gray-300 leading-relaxed text-center md:opacity-0 md:group-hover:opacity-100 md:absolute md:inset-0 md:bg-black/90 md:flex md:items-center md:justify-center md:p-6 md:transition-opacity md:duration-500">
+                <p>{service.description}</p>
               </div>
             </div>
           ))}
         </div>
-
-        
       </div>
     </section>
   );

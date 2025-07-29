@@ -131,7 +131,7 @@ export default function HomePage() {
         {/* 👉 Text */}
         <div className="w-full lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span className="text-purple-500 font-[Playwrite]">Muhammad Mufzan.</span>
           </h2>
 
@@ -149,13 +149,10 @@ export default function HomePage() {
           </a>
         </div>
       </section>
-      <main>
-        <ScrollingBanner />
-      </main>
-      <main >
-  <MouseTrail />
-  ...
-</main>
+
+      {/* 🔁 Scrolling Banner + Mouse Trail */}
+      <ScrollingBanner />
+      <MouseTrail />
 
       {/* 🔽 Sections */}
       <section id="about" className="mt-16 px-4 sm:px-6 animate-fadeIn"><AboutSection /></section>
@@ -165,7 +162,6 @@ export default function HomePage() {
       <section id="contact" className="mt-16 px-4 sm:px-6 animate-fadeIn">
         <div className="max-w-4xl mx-auto"><ContactForm /></div>
       </section>
-      
       <section id="footer" className="mt-16 px-4 sm:px-6 animate-fadeIn"><Footer /></section>
     </main>
   );

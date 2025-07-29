@@ -147,7 +147,7 @@ export default function HomePage() {
             {/* Download Button */}
  <button
   onClick={() => {
-    window.open("/My CV.pdf", "_blank");
+    window.open("/my-cv.pdf", "_blank");
   }}
   className="px-6 py-3 border border-purple-600 text-purple-500 hover:bg-purple-600 hover:text-white transition rounded"
 >

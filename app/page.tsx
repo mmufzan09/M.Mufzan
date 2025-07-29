@@ -145,7 +145,7 @@ export default function HomePage() {
             
 
             {/* Download Button */}
-         <button
+ <button
   onClick={() => {
     window.open("/My CV.pdf", "_blank");
   }}
@@ -153,6 +153,7 @@ export default function HomePage() {
 >
   View CV
 </button>
+
           </div>
         </div>
       </section>

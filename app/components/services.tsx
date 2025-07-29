@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   FaLaptopCode,
   FaShoppingCart,
@@ -50,6 +50,12 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+
+  const handleCardClick = (index: number) => {
+    setActiveCard(activeCard === index ? null : index);
+  };
+
   return (
     <section className="bg-black text-white py-20 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto text-center">
@@ -57,27 +63,50 @@ const ServicesSection = () => {
           My Services
         </h2>
 
-        {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="relative bg-gray-900 p-8 rounded-2xl border border-gray-700 shadow-lg group transition duration-500 overflow-hidden"
-            >
-              {/* Icon and Title */}
-              <div className="flex flex-col items-center mb-4">
-                {service.icon}
-                <h3 className="mt-4 text-xl font-semibold text-white">
+          {services.map((service, index) => {
+            const isActive = activeCard === index;
+
+            return (
+              <div
+                key={index}
+                className={`relative rounded-2xl border border-gray-700 shadow-lg group overflow-hidden transition-all duration-300
+                  p-8 cursor-pointer
+                  ${isActive ? "bg-purple-800" : "bg-gray-900"}
+                  md:hover:bg-purple-800
+                `}
+                onClick={() => handleCardClick(index)}
+              >
+                {/* Icon */}
+                <div className="flex flex-col items-center mb-4">
+                  {service.icon}
+                </div>
+
+                {/* Title (always visible on mobile, hidden on desktop hover) */}
+                <h3
+                  className={`
+                    text-xl font-semibold text-white text-center mb-2
+                    transition-opacity duration-300
+                    md:group-hover:opacity-0
+                  `}
+                >
                   {service.title}
                 </h3>
-              </div>
 
-              {/* 📱 Always visible on mobile, hover effect for desktop */}
-              <div className="text-sm text-gray-300 leading-relaxed text-center md:opacity-0 md:group-hover:opacity-100 md:absolute md:inset-0 md:bg-black/90 md:flex md:items-center md:justify-center md:p-6 md:transition-opacity md:duration-500">
-                <p>{service.description}</p>
+                {/* Description */}
+                <div
+                  className={`
+                    text-sm leading-relaxed text-center text-gray-300 transition-opacity duration-500
+                    md:absolute md:inset-0 md:p-6 md:flex md:items-center md:justify-center md:bg-black/90
+                    ${isActive ? "opacity-100 bg-black/90 rounded-xl p-4" : "opacity-0"}
+                    md:group-hover:opacity-100
+                  `}
+                >
+                  <p>{service.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

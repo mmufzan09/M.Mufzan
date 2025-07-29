@@ -23,11 +23,12 @@ const AboutSection = () => {
   Hello, I&#39;m <span className="font-semibold text-white">Muhammad Mufzan</span>, a dedicated and creative web developer with over 6 months of real-world experience in building modern, responsive websites and interfaces. I specialize in front-end development and UI/UX design, combining design thinking with technical execution to create digital products that are both functional and visually engaging. My daily tools include HTML, CSS, JavaScript, TypeScript, React, and Tailwind CSS — and I enjoy turning static ideas into dynamic, user-centered experiences.
 
   <br /><br />
-  Alongside client work, I actively teach web development at a local institute where I help aspiring developers build strong foundations in HTML, CSS, and JavaScript, and guide them through real-world projects using modern frameworks. This teaching experience has helped me not only reinforce my own technical skills but also grow in communication, leadership, and mentorship. I believe that learning never stops, and I’m constantly improving by staying up-to-date with the latest web technologies and design trends.
+  Alongside client work, I actively teach web development at a local institute where I help aspiring developers build strong foundations in HTML, CSS, and JavaScript, and guide them through real-world projects using modern frameworks. This teaching experience has helped me not only reinforce my own technical skills but also grow in communication, leadership, and mentorship. I believe that learning never stops, and I&#39;m constantly improving by staying up-to-date with the latest web technologies and design trends.
 
   <br /><br />
-  I’m passionate about turning ideas into polished, high-performance websites. Whether you're building a personal portfolio, an e-commerce platform, or a custom web application — I’m always excited to bring creative visions to life with clean code and thoughtful design. I enjoy collaborating with clients, solving real problems, and delivering experiences that leave a lasting impression. Let’s work together and create something amazing!
+  I&#39;m passionate about turning ideas into polished, high-performance websites. Whether you&#39;re building a personal portfolio, an e-commerce platform, or a custom web application — I&#39;m always excited to bring creative visions to life with clean code and thoughtful design. I enjoy collaborating with clients, solving real problems, and delivering experiences that leave a lasting impression. Let&#39;s work together and create something amazing!
 </p>
+
 
 
 

@@ -1,4 +1,4 @@
-import { Icon, icons } from "lucide-react";
+
 import "../app/globals.css"
 import { ThemeProvider } from "next-themes";
 

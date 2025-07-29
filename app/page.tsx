@@ -139,14 +139,24 @@ export default function HomePage() {
             I am Muhammad Mufzan, a dedicated Web Developer. I have created many websites for clients, actively working on Fiverr, and teaching web development for the past year. I specialize in advanced front-end development and have basic knowledge of backend.
           </p>
 
-          <a
-            href="/MY CV.PDF"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block px-6 py-3 border border-purple-600 text-purple-500 hover:bg-purple-600 hover:text-white transition rounded"
-          >
-            Download CV
-          </a>
+          {/* ✅ Buttons: View & Download */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            {/* View Button */}
+            
+
+            {/* Download Button */}
+            <button
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/my-cv.pdf";
+                link.download = "Muhammad_Mufzan_CV.pdf";
+                link.click();
+              }}
+              className="px-6 py-3 border border-purple-600 text-purple-500 hover:bg-purple-600 hover:text-white transition rounded"
+            >
+              Download CV
+            </button>
+          </div>
         </div>
       </section>
 

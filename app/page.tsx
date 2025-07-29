@@ -145,17 +145,14 @@ export default function HomePage() {
             
 
             {/* Download Button */}
-            <button
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/my-cv.pdf";
-                link.download = "Muhammad_Mufzan_CV.pdf";
-                link.click();
-              }}
-              className="px-6 py-3 border border-purple-600 text-purple-500 hover:bg-purple-600 hover:text-white transition rounded"
-            >
-              Download CV
-            </button>
+         <button
+  onClick={() => {
+    window.open("/My CV.pdf", "_blank");
+  }}
+  className="px-6 py-3 border border-purple-600 text-purple-500 hover:bg-purple-600 hover:text-white transition rounded"
+>
+  View CV
+</button>
           </div>
         </div>
       </section>

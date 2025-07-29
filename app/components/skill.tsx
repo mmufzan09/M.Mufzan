@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 const skills = [
   {
@@ -49,9 +50,11 @@ export default function MySkills() {
                        hover:scale-105 active:scale-105 hover:bg-purple-700/80 active:bg-purple-800/90 
                        hover:shadow-2xl hover:z-10"
           >
-            <img
+            <Image
               src={skill.icon}
               alt={`${skill.name} Icon`}
+              width={64}
+              height={64}
               className="mx-auto w-16 h-16 mb-4 transition-transform duration-300 group-hover:scale-110 group-active:scale-110"
             />
             <h3 className="text-xl font-semibold mb-2 text-white transition-colors group-hover:text-white group-active:text-white">
